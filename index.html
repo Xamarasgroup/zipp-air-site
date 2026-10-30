@@ -420,9 +420,9 @@ sb.addEventListener('click',function(){
   document.getElementById('icoOff').style.display=hv.muted?'block':'none';
   document.getElementById('soundLbl').textContent=hv.muted?'Play original sound':'Sound on';
 });
-var ACK={"Daybed":{lbl:"I understand the <b>IDR 300K minimum spend</b> per daybed, fully redeemable on food & drinks.",msg:"I understand the IDR 300K minimum spend per daybed"},
-"Sunbed":{lbl:"I understand the <b>IDR 200K minimum spend</b> per sunbed, fully redeemable on food & drinks.",msg:"I understand the IDR 200K minimum spend per sunbed"},
-"Beanbag Pair":{lbl:"I understand beanbags are <b>free seating with no minimum spend</b>, held subject to availability.",msg:"I understand beanbags are free seating with no minimum spend"}};
+var ACK={"Daybed":{lbl:"I understand the <b>IDR 300K minimum spend</b> per daybed, fully redeemable on food & drinks.",msg:"Yes, I understand the minimum spend of IDR 300K per daybed and I am ready to send the deposit"},
+"Sunbed":{lbl:"I understand the <b>IDR 200K minimum spend</b> per sunbed, fully redeemable on food & drinks.",msg:"Yes, I understand the minimum spend of IDR 200K per sunbed and I am ready to send the deposit"},
+"Beanbag Pair":{lbl:"I understand beanbags are <b>free seating with no minimum spend</b>, held subject to availability.",msg:"Yes, I understand beanbags are free seating with no minimum spend"}};
 function ackSync(){var s=document.querySelector('#seats button.on').dataset.seat;document.getElementById('ackLbl').innerHTML=ACK[s].lbl;}
 function setSeat(b){document.querySelectorAll('#seats button').forEach(x=>x.classList.remove('on'));b.classList.add('on');ackSync()}
 function pickSeat(b){var s=b.dataset.seat;document.querySelectorAll('#seats button').forEach(x=>x.classList.toggle('on',x.dataset.seat===s));ackSync();location.hash='book'}

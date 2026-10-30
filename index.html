@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Zipp Air Beach Club — Gili Air's Sunset Playground</title>
+<meta name="description" content="Curated cocktails, beach bites, all-day play and the best sunset spot on Gili Air. Book your daybed straight on WhatsApp.">
+<meta property="og:title" content="Zipp Air Beach Club — Gili Air">
+<meta property="og:description" content="Gili Air's sunset playground. Book your spot on WhatsApp.">
+<meta property="og:image" content="/assets/campaign/golden-hour.webp">
+<meta name="theme-color" content="#0B5C44">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+:root{--emerald:#0B5C44;--emerald-deep:#07402F;--butter:#F6E7A6;--butter-strong:#F3D55B;--cream:#FFFBEF;--ink:#123B2E;
+--serif:"Didot","Bodoni 72","Playfair Display",Georgia,serif;--script:"Snell Roundhand","Apple Chancery",cursive;
+--sans:"Helvetica Neue",Helvetica,Arial,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--emerald);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border-radius:999px;font-weight:600;font-size:13px;
+letter-spacing:.08em;text-transform:uppercase;padding:14px 24px;border:1.5px solid var(--emerald);cursor:pointer;
+transition:transform .15s,background .15s,color .15s;background:transparent;color:var(--emerald);font-family:var(--sans)}
+.btn:hover{transform:translateY(-1px)}
+.btn-solid{background:var(--emerald);border-color:var(--emerald);color:var(--cream)}
+.btn-solid:hover{background:var(--emerald-deep)}
+.btn-butter{background:var(--butter-strong);border-color:var(--butter-strong);color:var(--emerald-deep)}
+.eyebrow{font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:700;opacity:.75;margin-bottom:14px}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5.5vw,64px);line-height:1.04;letter-spacing:-.01em;margin-bottom:18px;text-wrap:balance}
+h2 .sc{font-family:var(--script);font-weight:400;font-size:1.08em}
+section{padding:clamp(64px,9vw,110px) clamp(18px,5vw,64px)}
+.wrap{max-width:1180px;margin:0 auto}
+
+/* nav */
+nav{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:14px;
+padding:10px clamp(14px,3vw,36px);background:rgba(255,251,239,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(11,92,68,.15)}
+nav .mark img{height:44px;width:auto}
+nav .links{display:flex;gap:22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+nav .links a{text-decoration:none;opacity:.85}
+nav .links a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:860px){nav .links{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--cream);overflow:hidden;padding:40px 20px}
+.hero video,.hero .fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,64,47,.5),rgba(7,64,47,.25) 40%,rgba(7,64,47,.65))}
+.hero .inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:16px}
+.hero .sub{font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(40px,7vw,84px);line-height:1.02;max-width:11em;text-wrap:balance}
+.hero p{max-width:34em;font-size:clamp(16px,1.8vw,19px)}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+.hero .btn{border-color:var(--cream)}
+.hero .btn-ghost{color:var(--cream)}
+.hero .btn-solid{background:var(--cream);border-color:var(--cream);color:var(--emerald)}
+.marquee{background:var(--emerald);color:var(--cream);overflow:hidden;white-space:nowrap;border-top:1px solid var(--emerald-deep)}
+.marquee .track{display:inline-block;padding:12px 0;animation:slide 30s linear infinite;font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600}
+.marquee span{margin:0 22px}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+
+/* info strip */
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;padding:34px clamp(18px,5vw,64px);border-bottom:1px solid rgba(11,92,68,.14)}
+.info div{text-align:center}
+.info .k{font-size:11px;letter-spacing:.26em;text-transform:uppercase;font-weight:700;opacity:.7}
+.info .v{font-family:var(--serif);font-size:22px;margin-top:6px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:40px}
+.gal img{aspect-ratio:4/5;object-fit:cover;border-radius:8px}
+.gal img:nth-child(2),.gal img:nth-child(4){transform:translateY(22px)}
+@media(max-width:760px){.gal{grid-template-columns:repeat(2,1fr)}.gal img:nth-child(2),.gal img:nth-child(4){transform:none}}
+
+/* seating */
+.seats{background:var(--emerald);color:var(--cream)}
+.seats .eyebrow{color:var(--butter);opacity:1}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:44px}
+.tier{background:var(--cream);color:var(--emerald);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.tier img{aspect-ratio:4/3;object-fit:cover}
+.tier .body{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tier h3{font-family:var(--serif);font-size:30px;font-weight:500}
+.tier p{font-size:15px;opacity:.9;flex:1}
+.tier .min{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--emerald-deep)}
+.tier .btn{align-self:flex-start}
+
+/* split sections */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.split img{border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.minis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.minis img{aspect-ratio:1/1}
+
+/* sandia */
+.sandia{background:var(--butter);color:var(--emerald-deep);text-align:center}
+.sandia .big{font-family:var(--serif);font-size:clamp(40px,7vw,80px);line-height:1}
+.sandia .sc{font-family:var(--script);display:block;font-size:.8em;margin-top:6px}
+.sandia p{max-width:34em;margin:16px auto 0}
+.sandia .tag{display:inline-block;margin-top:22px;border:2px solid var(--emerald-deep);border-radius:999px;padding:10px 24px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:13px}
+
+/* menu */
+.menu-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:40px 0 30px}
+.menu-tabs button{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
+padding:11px 20px;border-radius:999px;border:1.5px solid rgba(11,92,68,.4);background:transparent;color:var(--emerald);cursor:pointer}
+.menu-tabs button.on{background:var(--emerald);color:var(--cream);border-color:var(--emerald)}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:8px 40px}
+.mitem{padding:16px 0;border-bottom:1px dotted rgba(11,92,68,.35)}
+.mitem .mn{font-family:var(--serif);font-size:21px}
+.mitem .md{font-size:14px;opacity:.8;margin-top:4px}
+.mpane{display:none}.mpane.on{display:block}
+
+/* booking */
+.book{background:var(--emerald);color:var(--cream)}
+.book .eyebrow{color:var(--butter);opacity:1}
+.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px);align-items:start;margin-top:30px}
+@media(max-width:860px){.bgrid{grid-template-columns:1fr}}
+form .f{margin-bottom:16px}
+form label{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:8px;color:var(--butter)}
+form input,form select,form textarea{width:100%;padding:14px 16px;border-radius:10px;border:1.5px solid rgba(255,251,239,.35);
+background:rgba(255,251,239,.08);color:var(--cream);font-family:var(--sans);font-size:15px}
+form input::placeholder,form textarea::placeholder{color:rgba(255,251,239,.5)}
+form select option{color:var(--emerald)}
+.seatpick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.seatpick button{padding:14px 8px;border-radius:10px;border:1.5px solid rgba(255,251,239,.35);background:transparent;color:var(--cream);
+font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.06em;cursor:pointer}
+.seatpick button.on{background:var(--butter-strong);color:var(--emerald-deep);border-color:var(--butter-strong)}
+.book .note{font-size:13px;opacity:.85;margin-top:14px}
+.book .btn-butter{width:100%;justify-content:center;margin-top:8px;font-size:14px;padding:17px}
+
+footer{padding:44px clamp(18px,5vw,64px);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;font-size:13px}
+footer .links{display:flex;gap:18px}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline;text-underline-offset:4px}
+
+#installBtn{display:none}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+background:rgba(255,251,239,.94);backdrop-filter:blur(12px);border-top:1px solid rgba(11,92,68,.16)}
+.dock .btn{flex:1;justify-content:center}
+@media(max-width:760px){.dock{display:flex}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="mark" href="#top"><img src="/assets/zipp-air-logo.png" alt="Zipp Air Beach Club"></a>
+  <div class="links">
+    <a href="#space">Our Space</a><a href="#seating">Seats</a><a href="#play">Play</a><a href="#menu">Food &amp; Drinks</a><a href="#sunset">Sunset</a>
+  </div>
+  <a class="btn btn-solid" href="#book">Book your spot</a>
+</nav>
+
+<header class="hero" id="top">
+  <video autoplay muted loop playsinline poster="/assets/campaign/zipp-opening-poster.jpg">
+    <source src="/assets/campaign/zipp-opening.mp4" type="video/mp4">
+  </video>
+  <div class="inner">
+    <div class="sub">Sunset Point &middot; Gili Air</div>
+    <h1>Gili Air&rsquo;s sunset playground</h1>
+    <p>Curated cocktails, beach bites, all-day play and the best sunset spot on the island.</p>
+    <div class="ctas">
+      <a class="btn btn-solid" href="#book">Book your spot</a>
+      <a class="btn btn-ghost" href="#space">Discover Zipp Air</a>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>swim</span>&middot;<span>sip</span>&middot;<span>play</span>&middot;<span>sunset</span>&middot;<span>repeat</span>&middot;<span>swim</span>&middot;<span>sip</span>&middot;<span>play</span>&middot;<span>sunset</span>&middot;<span>repeat</span>&middot;<span>swim</span>&middot;<span>sip</span>&middot;<span>play</span>&middot;<span>sunset</span>&middot;<span>repeat</span>&middot;<span>swim</span>&middot;<span>sip</span>&middot;<span>play</span>&middot;<span>sunset</span>&middot;<span>repeat</span>&middot;
+</div></div>
+
+<div class="info">
+  <div><div class="k">Open daily</div><div class="v">10:00 — 20:00</div></div>
+  <div><div class="k">Find us</div><div class="v">Sunset Point, Gili Air</div></div>
+  <div><div class="k">From the harbour</div><div class="v">10–15 min walk &middot; 5 min bike</div></div>
+  <div><div class="k">Bookings</div><div class="v">WhatsApp only</div></div>
+</div>
+
+<section id="space">
+  <div class="wrap">
+    <p class="eyebrow">01 / Take a look around</p>
+    <h2>Our <span class="sc">space.</span></h2>
+    <p style="max-width:36em">Butter-yellow stripes, open sand and a front-row seat to Gili Air&rsquo;s west coast. Start with an ocean dip, settle into the stripes, order something cold and stay all the way through sunset.</p>
+    <div class="gal">
+      <img src="/assets/gallery/space/beanbags-wide.webp" alt="Beanbags on the sand" loading="lazy">
+      <img src="/assets/gallery/space/group-sunbeds.webp" alt="Sunbeds by the water" loading="lazy">
+      <img src="/assets/gallery/space/ocean-friends.webp" alt="Friends in the ocean" loading="lazy">
+      <img src="/assets/gallery/space/sunset-wide.webp" alt="Sunset at Zipp Air" loading="lazy">
+    </div>
+    <div style="margin-top:46px"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=-8.361659,116.0765605">Open in Google Maps</a></div>
+  </div>
+</section>
+
+<section class="seats" id="seating">
+  <div class="wrap">
+    <p class="eyebrow">02 / Pick your spot</p>
+    <h2>Comfort first. <span class="sc">Sunset after.</span></h2>
+    <div class="tiers">
+      <div class="tier"><img src="/assets/gallery/seating/sunbed.webp" alt="Sunbed" loading="lazy">
+        <div class="body"><h3>Sunbed</h3><p>Thick, soft and made for a proper beach-day stretch.</p>
+        <div class="min">Minimum spend &middot; IDR 200K</div><button class="btn" data-seat="Sunbed" onclick="pickSeat(this)">Book a sunbed</button></div></div>
+      <div class="tier"><img src="/assets/gallery/seating/daybed-social.webp" alt="Daybed" loading="lazy">
+        <div class="body"><h3>Daybed</h3><p>Fits 2&ndash;3 people, with enough room for drinks, cards and staying awhile.</p>
+        <div class="min">Minimum spend &middot; IDR 300K</div><button class="btn" data-seat="Daybed" onclick="pickSeat(this)">Book a daybed</button></div></div>
+      <div class="tier"><img src="/assets/gallery/seating/beanbag-front.webp" alt="Front-row beanbags" loading="lazy">
+        <div class="body"><h3>Front-row beanbags</h3><p>Set as a pair or arranged to fit your group.</p>
+        <div class="min">No minimum spend</div><button class="btn" data-seat="Beanbag Pair" onclick="pickSeat(this)">Book beanbags</button></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="ocean">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">03 / Straight into the blue</p>
+      <h2>An easy <span class="sc">ocean dip.</span></h2>
+      <p style="max-width:30em">Calm, shallow water right in front of the beach club &mdash; just steps from your seat. Fresh-water shower after your dip: rinse off, head back to your spot and keep the day going.</p>
+    </div>
+    <div class="minis">
+      <img src="/assets/gallery/ocean/float.webp" alt="Floating" loading="lazy">
+      <img src="/assets/gallery/ocean/entry.webp" alt="Into the water" loading="lazy">
+      <img src="/assets/gallery/ocean/run.webp" alt="Beach run" loading="lazy">
+      <img src="/assets/gallery/seating/fresh-water-shower.webp" alt="Fresh-water shower" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="seats" id="play">
+  <div class="wrap split">
+    <div class="minis">
+      <img src="/assets/gallery/playground/volleyball.webp" alt="Beach volleyball" loading="lazy">
+      <img src="/assets/gallery/playground/chess-close.webp" alt="Chess" loading="lazy">
+      <img src="/assets/gallery/playground/swing-wide.webp" alt="Swings" loading="lazy">
+      <img src="/assets/gallery/playground/beach-paddle.webp" alt="Beach paddle" loading="lazy">
+    </div>
+    <div>
+      <p class="eyebrow">04 / The playground</p>
+      <h2>Your fun vacation should <span class="sc">look like this.</span></h2>
+      <p style="max-width:30em">Beach paddle, volleyball, swings, chess and cards. All activities are complimentary for Zipp Air customers &mdash; all day long.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sandia">
+  <div class="wrap">
+    <div class="big">Sand&iacute;a <span class="sc">Sundays</span></div>
+    <p><strong>15% off the Sand&iacute;a Freeze, every Sunday.</strong><br>Our bestselling signature &mdash; frozen watermelon, vodka, feta and mint. Live DJ from afternoon till sunset.</p>
+    <div class="tag">Live DJ &middot; every Sunday</div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <p class="eyebrow">05 / Eat &amp; drink</p>
+    <h2>From first sip <span class="sc">to last bite.</span></h2>
+    <div class="menu-tabs" id="mtabs">
+      <button class="on" data-p="signatures">Signatures</button>
+      <button data-p="classics">Classics</button>
+      <button data-p="fresh">Lemonades &amp; Smoothies</button>
+      <button data-p="coffee">Coffee</button>
+      <button data-p="bites">Beach Bites</button>
+      <button data-p="mains">Mains</button>
+      <button data-p="sweets">Sweets</button>
+    </div>
+    <div class="mpane on" id="p-signatures"><div class="mgrid">
+      <div class="mitem"><div class="mn">Sand&iacute;a Freeze</div><div class="md">Vodka &middot; frozen watermelon &middot; feta &middot; mint</div></div>
+      <div class="mitem"><div class="mn">Spice Spice Baby</div><div class="md">Tequila &middot; jalape&ntilde;o &middot; cucumber &middot; lime &middot; coconut snow</div></div>
+      <div class="mitem"><div class="mn">Cloud Nine</div><div class="md">White rum &middot; coconut pur&eacute;e &middot; Malibu &middot; lemon</div></div>
+      <div class="mitem"><div class="mn">Green Light</div><div class="md">Tequila &middot; Cointreau &middot; basil &middot; lime &middot; soft foam</div></div>
+      <div class="mitem"><div class="mn">Letchy Business</div><div class="md">Vodka &middot; orange liqueur &middot; lychee &middot; lime</div></div>
+      <div class="mitem"><div class="mn">Fresh State</div><div class="md">Gin &middot; basil &middot; coriander &middot; cucumber &middot; mint &middot; lime</div></div>
+      <div class="mitem"><div class="mn">Campari Papi</div><div class="md">Gin &middot; Campari &middot; pineapple &middot; lemon &middot; agave</div></div>
+      <div class="mitem"><div class="mn">Berry Naughty</div><div class="md">Gin &middot; mixed berries &middot; coconut pur&eacute;e &middot; whipped cream</div></div>
+    </div></div>
+    <div class="mpane" id="p-classics"><div class="mgrid">
+      <div class="mitem"><div class="mn">Cosmopolitan</div></div><div class="mitem"><div class="mn">Caipirinha</div></div>
+      <div class="mitem"><div class="mn">Caipiroska</div></div><div class="mitem"><div class="mn">Daiquiri</div></div>
+      <div class="mitem"><div class="mn">Pi&ntilde;a Colada</div></div><div class="mitem"><div class="mn">Negroni</div></div>
+      <div class="mitem"><div class="mn">Margarita</div></div><div class="mitem"><div class="mn">Aperol Spritz</div></div>
+      <div class="mitem"><div class="mn">Mojito</div></div><div class="mitem"><div class="mn">Whiskey Sour</div></div>
+      <div class="mitem"><div class="mn">Pornstar Martini</div></div><div class="mitem"><div class="mn">Espresso Martini</div></div>
+      <div class="mitem"><div class="mn">Amaretto Sour</div></div>
+    </div></div>
+    <div class="mpane" id="p-fresh"><div class="mgrid">
+      <div class="mitem"><div class="mn">Blue Crush</div><div class="md">Blueberry &middot; lemon &middot; mint</div></div>
+      <div class="mitem"><div class="mn">Berry Fresh</div><div class="md">Strawberry &middot; lemon &middot; mint</div></div>
+      <div class="mitem"><div class="mn">Golden Hour</div><div class="md">Pineapple &middot; lemon &middot; mint</div></div>
+      <div class="mitem"><div class="mn">Passion Play</div><div class="md">Passion fruit &middot; lemon &middot; mint</div></div>
+      <div class="mitem"><div class="mn">Tutti Frutti</div><div class="md">Mixed fruits &middot; lemon &middot; mint</div></div>
+      <div class="mitem"><div class="mn">Berry Boost</div><div class="md">Mixed berries &middot; banana &middot; yogurt</div></div>
+      <div class="mitem"><div class="mn">Dragon Glow</div><div class="md">Dragon fruit &middot; banana &middot; coconut milk &middot; honey</div></div>
+      <div class="mitem"><div class="mn">Mango Tango</div><div class="md">Mango &middot; banana &middot; yogurt</div></div>
+      <div class="mitem"><div class="mn">Tropical State</div><div class="md">Pineapple &middot; mango &middot; passion fruit &middot; orange juice</div></div>
+    </div></div>
+    <div class="mpane" id="p-coffee"><div class="mgrid">
+      <div class="mitem"><div class="mn">Espresso</div></div><div class="mitem"><div class="mn">Long Black</div></div>
+      <div class="mitem"><div class="mn">Americano</div></div><div class="mitem"><div class="mn">Cappuccino</div></div>
+      <div class="mitem"><div class="mn">Flat White</div></div><div class="mitem"><div class="mn">Latte</div></div>
+    </div></div>
+    <div class="mpane" id="p-bites"><div class="mgrid">
+      <div class="mitem"><div class="mn">Truffle Crispy Potatoes</div><div class="md">Crispy baby potatoes, Parmesan snow, fresh herbs, truffle oil</div></div>
+      <div class="mitem"><div class="mn">Sweet Potato Fries</div><div class="md">Lightly salted, with sour cream</div></div>
+      <div class="mitem"><div class="mn">Loaded Beef Nachos</div><div class="md">Slow-simmered beef, melted cheese, guacamole, pico de gallo &middot; add jalape&ntilde;os</div></div>
+      <div class="mitem"><div class="mn">Coconut Crispy Chicken</div><div class="md">Golden coconut crust, spicy mayo</div></div>
+      <div class="mitem"><div class="mn">Garlic Edamame</div><div class="md">Garlic butter &amp; sea salt</div></div>
+      <div class="mitem"><div class="mn">Snapper Tempura</div><div class="md">With honey mustard sauce</div></div>
+      <div class="mitem"><div class="mn">Grilled Three-Cheese Sourdough</div><div class="md">Mozzarella, cheddar &amp; halloumi, house pickles</div></div>
+      <div class="mitem"><div class="mn">Golden Halloumi Fries</div><div class="md">Pan-grilled, with hot honey</div></div>
+      <div class="mitem"><div class="mn">Island Fruit Platter</div><div class="md">Chilled seasonal fruit, lime &amp; mint</div></div>
+      <div class="mitem"><div class="mn">Island Cheese Board</div><div class="md">Five cheeses, fruit, onion jam, toasted sourdough</div></div>
+    </div></div>
+    <div class="mpane" id="p-mains"><div class="mgrid">
+      <div class="mitem"><div class="mn">Beef &amp; Gouda Melt</div><div class="md">Smashed patty, young Gouda, caramelized onion, honey mustard, crispy potatoes</div></div>
+      <div class="mitem"><div class="mn">Sambal Matah Snapper</div><div class="md">Grilled snapper, coconut rice, arugula, sambal matah, charred lime</div></div>
+      <div class="mitem"><div class="mn">Crispy Chicken Breast</div><div class="md">Roasted sweet potato, arugula, pico de gallo, spicy mayo</div></div>
+      <div class="mitem"><div class="mn">Sweet Potato &amp; Halloumi Steak</div><div class="md">Cream cheese, caramelized onion, seared halloumi, balsamic</div></div>
+      <div class="mitem"><div class="mn">Thai Pineapple Chicken Fried Rice</div><div class="md">Caramelized pineapple, egg, Thai spices, crispy shallots</div></div>
+    </div></div>
+    <div class="mpane" id="p-sweets"><div class="mgrid">
+      <div class="mitem"><div class="mn">Blueberry Crumble Royale</div><div class="md">Cheesecake, blueberry compote, buttery crumble</div></div>
+      <div class="mitem"><div class="mn">Almond Fudge Brownie</div><div class="md">With vanilla ice cream</div></div>
+      <div class="mitem"><div class="mn">Island Banana Cake</div><div class="md">Cream cheese &amp; coconut snow</div></div>
+      <div class="mitem"><div class="mn">Ice Cream</div><div class="md">Vanilla &middot; chocolate &middot; pistachio &middot; triple mix</div></div>
+    </div></div>
+  </div>
+</section>
+
+<section class="seats" id="sunset" style="text-align:center">
+  <div class="wrap">
+    <p class="eyebrow">06 / Stay for this</p>
+    <h2>The best sunset spot <span class="sc">on the island.</span></h2>
+    <p style="max-width:30em;margin:0 auto">Bonfire every evening. Never rush a sunset.</p>
+    <div class="gal" style="margin-top:40px">
+      <img src="/assets/gallery/sunset/sun-v2.png" alt="Sunset" loading="lazy">
+      <img src="/assets/campaign/golden-hour.webp" alt="Golden hour" loading="lazy">
+      <img src="/assets/gallery/sunset/bonfire-friends-v2.png" alt="Bonfire with friends" loading="lazy">
+      <img src="/assets/gallery/sunset/bonfire-solo-sunset-v3.png" alt="Bonfire at sunset" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <p class="eyebrow">07 / Make it official</p>
+    <h2>Sunset&rsquo;s better with <span class="sc">your name on it.</span></h2>
+    <div class="bgrid">
+      <div>
+        <p style="max-width:28em">Choose your spot and send the request straight to WhatsApp. We confirm availability there &mdash; no email, no extra steps.</p>
+        <p class="note">Daybed fits 2&ndash;3 guests &middot; IDR 300K minimum spend per daybed &middot; sunbed IDR 200K &middot; beanbags free.<br>Deposit details follow after availability is confirmed.</p>
+        <p class="note" style="margin-top:22px">Prefer to just talk? <a href="https://wa.me/6287761641631" style="color:var(--butter)">Chat with Zipp Air &middot; +62 877-6164-1631</a></p>
+        <button class="btn" id="installBtn" style="margin-top:22px;border-color:var(--butter);color:var(--butter)">Add Zipp Air to your home screen</button>
+      </div>
+      <form onsubmit="return sendWA(event)">
+        <div class="f"><label>Choose your spot</label>
+          <div class="seatpick" id="seats">
+            <button type="button" data-seat="Sunbed" onclick="setSeat(this)">Sunbed</button>
+            <button type="button" class="on" data-seat="Daybed" onclick="setSeat(this)">Daybed</button>
+            <button type="button" data-seat="Beanbag Pair" onclick="setSeat(this)">Beanbags</button>
+          </div></div>
+        <div class="f"><label for="nm">Your name</label><input id="nm" required placeholder="Your name"></div>
+        <div class="f"><label for="gs">Number of guests</label><input id="gs" type="number" min="1" max="40" value="2"></div>
+        <div class="f"><label for="dt">Date</label><input id="dt" type="date" required></div>
+        <div class="f"><label for="tm">Arrival time</label><select id="tm">
+          <option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option selected>14:00</option>
+          <option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option></select></div>
+        <div class="f"><label for="hm">How many</label><select id="hm">
+          <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option>
+          <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div>
+        <div class="f"><label for="nt">Anything we should know?</label><textarea id="nt" rows="2" placeholder="Birthday, dietary notes, big group&hellip;"></textarea></div>
+        <button class="btn btn-butter" type="submit">Send booking on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div><strong>Zipp Air Beach Club</strong> &middot; Sunset Point, Gili Air<br>Open daily 10:00 &mdash; 20:00</div>
+  <div class="links">
+    <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=-8.361659,116.0765605">Google Maps</a>
+    <a target="_blank" rel="noopener" href="https://wa.me/6287761641631">WhatsApp</a>
+    <a target="_blank" rel="noopener" href="https://instagram.com/zippairbeachcllub">Instagram</a>
+  </div>
+  <div>&copy; 2026 Zipp Air Beach Club</div>
+</footer>
+
+<div class="dock">
+  <a class="btn btn-solid" href="#book">Book your spot</a>
+  <a class="btn" href="https://wa.me/6287761641631">WhatsApp</a>
+</div>
+
+<script>
+function setSeat(b){document.querySelectorAll('#seats button').forEach(x=>x.classList.remove('on'));b.classList.add('on')}
+function pickSeat(b){var s=b.dataset.seat;document.querySelectorAll('#seats button').forEach(x=>x.classList.toggle('on',x.dataset.seat===s));location.hash='book'}
+function sendWA(e){
+  e.preventDefault();
+  var seat=document.querySelector('#seats button.on').dataset.seat;
+  var msg="Hi Zipp Air ☀️ I'd like to book:\n"
+    +"• "+document.getElementById('hm').value+"x "+seat+"\n"
+    +"• Date: "+document.getElementById('dt').value+"\n"
+    +"• Arrival: "+document.getElementById('tm').value+"\n"
+    +"• Name: "+document.getElementById('nm').value+"\n"
+    +"• Guests: "+document.getElementById('gs').value;
+  var nt=document.getElementById('nt').value.trim();
+  if(nt)msg+="\n• Note: "+nt;
+  window.open("https://wa.me/6287761641631?text="+encodeURIComponent(msg),"_blank");
+  return false;
+}
+document.querySelectorAll('#mtabs button').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('#mtabs button').forEach(x=>x.classList.remove('on'));
+    document.querySelectorAll('.mpane').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');document.getElementById('p-'+b.dataset.p).classList.add('on');
+  });
+});
+var dt=document.getElementById('dt');if(dt&&!dt.value){dt.valueAsDate=new Date();}
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js').catch(function(){});}
+var deferredPrompt;window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferredPrompt=e;
+  var btn=document.getElementById('installBtn');btn.style.display='inline-flex';
+  btn.onclick=function(){btn.style.display='none';deferredPrompt.prompt();}});
+</script>
+</body>
+</html>
